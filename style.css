@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eff7f6;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  max-width: 15ch;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: capitalize;
+  color: hsl(213, 96%, 11%);
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 0.3em;
+  color: hsl(213, 96%, 11%);
+}
+
+span {
+  color: hsl(106, 100%, 40%);
+  font-weight: 700;
+}
+
+main {
+  text-align: center;
+}
+
+button {
+  margin-inline: auto;
+  background-color: hsl(106, 100%, 40%);
+  color: hsl(213, 96%, 11%);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: inherit;
+  font-size: 1.125rem;
+  font-weight: 400;
+  border: 2px solid hsl(169, 100%, 98%);
+  border-radius: 0.3em;
+  padding: 1em 3em;
+  transition: background-color 300ms ease-in-out, box-shadow 100ms ease-in-out;
+  margin-top: 1.5em;
+}
+
+button:hover,
+button:focus {
+  cursor: pointer;
+  background-color: hsl(106, 100%, 42%);
+  outline: 2px solid hsl(106, 100%, 42%);
+  box-shadow: 0px 15px 20px hsla(0, 0%, 9%, 0.1);
+}
+
+button:hover .icon,
+button:focus .icon {
+  animation: back-and-forth 900ms ease-in-out 100ms infinite alternate;
+}
+
+@keyframes back-and-forth {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(40%);
+  }
+}
